@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 
 import com.eduardoczpla.hen.databinding.FragmentBatchBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class BatchFragment extends Fragment {
 
@@ -33,6 +34,14 @@ public class BatchFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
+            }
+        });
+
+        binding.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
         return root;
